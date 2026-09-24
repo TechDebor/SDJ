@@ -32,22 +32,23 @@ This system provides an end-to-end Enterprise Resource Planning (ERP) and HR sui
 ## Folder Structure
 ```
 /
-├── backend/
-│   ├── controllers/      # Business logic (auth, payroll, tasks, attendance, etc.)
-│   ├── middleware/       # JWT Auth verification, RBAC authorization, Multer
-│   ├── models/           # Mongoose schemas (User, Task, Payroll, Attendance, etc.)
-│   ├── routes/           # Express REST API route definitions
-│   └── server.js         # Backend entry point and DB connection
-└── frontend/
-    ├── src/
-    │   ├── api/          # Axios service layer
-    │   ├── components/   # Shared UI components (Calculators, Modals, SharedTop)
-    │   ├── context/      # React Context (AuthContext)
-    │   ├── pages/        # Role-based route pages (SuperAdmin, Admin, Employee, Shared)
-    │   ├── App.jsx       # React Router definitions
-    │   └── main.jsx      # React DOM entry point
-    ├── package.json
-    └── tailwind.config.js
+└── main/
+    ├── backend/
+    │   ├── controllers/      # Business logic (auth, payroll, tasks, attendance, etc.)
+    │   ├── middleware/       # JWT Auth verification, RBAC authorization, Multer
+    │   ├── models/           # Mongoose schemas (User, Task, Payroll, Attendance, etc.)
+    │   ├── routes/           # Express REST API route definitions
+    │   └── server.js         # Backend entry point and DB connection
+    └── frontend/
+        ├── src/
+        │   ├── api/          # Axios service layer
+        │   ├── components/   # Shared UI components (Calculators, Modals, SharedTop)
+        │   ├── context/      # React Context (AuthContext)
+        │   ├── pages/        # Role-based route pages (SuperAdmin, Admin, Employee, Shared)
+        │   ├── App.jsx       # React Router definitions
+        │   └── main.jsx      # React DOM entry point
+        ├── package.json
+        └── tailwind.config.js
 ```
 
 ## Application Modules
@@ -75,7 +76,7 @@ Built on MongoDB using Mongoose schemas.
 - **Advertisement/Announcement/Rate**: Stores global configuration variables for the dashboard.
 
 ## API Architecture
-The RESTful API is structured logically in `backend/routes/route.js`.
+The RESTful API is structured logically in `main/backend/routes/route.js`.
 - **Auth**: `POST /auth/login`, `POST /auth/send-otp`
 - **Users/Workforce**: `GET /workforce`, `POST /workforce`, `PUT /users/:id` (Protected by `SUPER_ADMIN`/`ADMIN` constraints)
 - **Tasks**: `GET /tasks`, `POST /tasks`, `PUT /tasks/:id`
@@ -95,10 +96,10 @@ The RESTful API is structured logically in `backend/routes/route.js`.
 
 ## Setup & Installation
 1. Clone the repository to your local environment.
-2. Navigate to `/backend` and run `npm install`.
-3. Create a `.env` file in the `/backend` directory matching the required variables below.
+2. Navigate to `/main/backend` and run `npm install`.
+3. Create a `.env` file in the `/main/backend` directory matching the required variables below.
 4. Start the backend server: `npm run server` (runs on Port 5000).
-5. Navigate to `/frontend` and run `npm install`.
+5. Navigate to `/main/frontend` and run `npm install`.
 6. Start the Vite development server: `npm run dev` (runs on Port 5173/5175).
 
 ### Environment Variables (Backend)
