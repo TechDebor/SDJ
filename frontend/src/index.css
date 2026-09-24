@@ -1,0 +1,33 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;700&display=swap');
+@import "tailwindcss";
+
+@layer base {
+  body {
+    @apply bg-slate-100/70 text-slate-900;
+    font-family: 'Inter', sans-serif;
+  }
+}
+
+@keyframes customMarquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.marquee-container {
+  display: flex;
+  width: max-content;
+  min-width: 200%;
+  animation: customMarquee 28s linear infinite;
+}
+
+.marquee-container > div {
+  flex: 1 0 50%;
+}
+
+.marquee-container:hover {
+  animation-play-state: paused;
+}

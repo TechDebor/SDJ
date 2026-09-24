@@ -1,0 +1,106 @@
+# =========================
+# ENV / SECRETS
+# =========================
+.env
+.env.*
+.env.local
+!.env.example
+*.pem
+*.key
+*.cert
+*.pfx
+*.p12
+
+# =========================
+# DEPENDENCIES
+# =========================
+node_modules/
+**/node_modules/
+
+# =========================
+# BUILD / DIST / VITE
+# =========================
+dist/
+dist-ssr/
+build/
+out/
+coverage/
+.vite/
+
+# =========================
+# LOGS
+# =========================
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# =========================
+# TEST / TEMP / QA FILES
+# =========================
+test-results/
+playwright-report/
+blob-report/
+playwright/.cache/
+.nyc_output/
+scratch/
+scratch_tests/
+tmp/
+temp/
+
+# =========================
+# DATABASE / LOCAL STORAGE
+# =========================
+*.db
+*.sqlite
+*.sqlite3
+*.db-journal
+*.sqlite-wal
+*.sqlite-shm
+
+# =========================
+# OS FILES
+# =========================
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# =========================
+# IDE / EDITORS
+# =========================
+.idea/
+.vscode/*
+!.vscode/extensions.json
+!.vscode/settings.json
+*.sublime-project
+*.sublime-workspace
+
+# =========================
+# CACHE
+# =========================
+.cache/
+.parcel-cache/
+.eslintcache
+.tsbuildinfo
+
+# =========================
+# BACKUP / TEMP
+# =========================
+*.tmp
+*.temp
+*.bak
+*.swp
+*.swo
+*~
+
+# =========================
+# ELECTRON / DESKTOP APP
+# =========================
+release/
+electron-builder.yml.local
+*.exe
+*.msi
+*.dmg
+*.deb
+*.AppImage
