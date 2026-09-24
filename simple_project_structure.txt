@@ -1,0 +1,28 @@
+SDJ/
+├── README.md
+├── folder_tree.txt
+├── main/
+│   ├── backend/
+│   │   ├── .env
+│   │   ├── app.js
+│   │   ├── package.json
+│   │   ├── package-lock.json
+│   │   ├── server.js
+│   │   ├── config/
+│   │   ├── controllers/
+│   │   ├── middleware/
+│   │   ├── models/
+│   │   ├── routes/
+│   │   ├── scratch/
+│   │   └── utils/
+│   └── frontend/
+│       ├── .env.local
+│       ├── dist/
+│       ├── index.html
+│       ├── package.json
+│       ├── package-lock.json
+│       ├── scratch/
+│       ├── src/
+│       └── vite.config.js
+│
+└── (node_modules and .git are ignored here because they are generated/dependency folders)
